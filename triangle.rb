@@ -15,14 +15,19 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+  sides = [a, b, c]
   case
-  when a == b && a == c
+  when sides[0] + sides[1] <= sides[2] || sides.any? == 0
+  	raise TriangleError
+  when a == b && a == c 
   	:equilateral
-  when a == b || a == c || b == c
+  when a == b || a == c || b == c 
   	:isosceles
   else
   	:scalene
   end
+
+
 end
 
 # Error class used in part 2.  No need to change this code.
