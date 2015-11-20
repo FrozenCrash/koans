@@ -15,7 +15,7 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
-  case [a, b, c]
+  case
   when a == b && a == c
   	:equilateral
   when a == b || a == c || b == c
