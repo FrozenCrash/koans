@@ -17,11 +17,9 @@ def triangle(a, b, c)
   # WRITE THIS CODE
   sides = [a, b, c]
   case
-  when sides[0] + sides[1] <= sides[2] || sides.any? == 0
-  	raise TriangleError
-  when sides[-1] <= 0 
-  	raise TriangleError
-  when sides[0] + sides[2] <= sides[1]
+  when sides[0] + sides[1] <= sides[2] || sides.any? == 0,
+       sides[-1] <= 0,
+       sides[0] + sides[2] <= sides[1]
   	raise TriangleError
   when a == b && a == c 
   	:equilateral
