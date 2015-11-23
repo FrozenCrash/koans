@@ -43,7 +43,7 @@ def score(dice)
   fives = dice.find_all{ |item| item == 5 }.count
   dice.delete(5)
   if fives >= 3
-    score += 300
+    score += 500
     fives -= 3 
   end
   score += fives * 50
