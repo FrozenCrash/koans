@@ -48,13 +48,6 @@ def score(dice)
   end
   score += fives * 50
 
-  # all_fives = dice.find_all{ |item| item == 5}.count
-  # if all_fives == 5
-  #   score += 500
-  #   all_fives -= 5
-  # end
-  # score += all_fives
-
   remeining = dice.uniq
   remeining.each do |roll|
     score += roll*100 if dice.count(roll) >=3
